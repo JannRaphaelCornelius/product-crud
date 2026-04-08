@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, length = 200)
@@ -21,10 +21,9 @@ public class Product {
     private Category category;
 
     private long price;
-
     private int stock;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(columnDefinition = "Text")
     private String description;
 
     private boolean active;
